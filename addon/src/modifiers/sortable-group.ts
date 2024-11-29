@@ -1,7 +1,7 @@
 /* eslint-disable ember/no-computed-properties-in-native-classes */
 /* eslint-disable ember/no-incorrect-calls-with-inline-anonymous-functions */
 import Modifier from 'ember-modifier';
-import { action, computed, set } from '@ember/object';
+import { action, set } from '@ember/object';
 import {
   isDownArrowKey,
   isEnterKey,
@@ -625,7 +625,6 @@ export default class SortableGroupModifier<T> extends Modifier<SortableGroupModi
    @property firstItemPosition
    @type Number
    */
-  @computed('direction', 'sortedItems')
   get firstItemPosition(): Position {
     const sortedItems = this.sortedItems;
 
