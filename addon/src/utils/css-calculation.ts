@@ -8,7 +8,9 @@
 */
 export function getBorderSpacing(el: Element) {
   const css = getComputedStyle(el).borderSpacing; // '0px 0px'
-  const [horizontal, vertical] = css.split(' ');
+
+  const [horizontal, initialVertical] = css.split(' ');
+  const vertical = initialVertical === undefined ? horizontal : initialVertical;
 
   return {
     horizontal: parseFloat(horizontal ?? ''),
