@@ -15,6 +15,8 @@ export default class ModifierController extends Controller {
     { fruit: 'lemon', day: 'Sunday' },
   ];
 
+  @tracked mutableRecords = ['Zero', 'One', 'Two', 'Three', 'Four'];
+
   @action handleDragChange(reordered) {
     this.records = reordered;
   }
@@ -75,5 +77,25 @@ export default class ModifierController extends Controller {
   updateGrid2(newOrder, draggedModel) {
     set(this, 'model.itemsGrid2', newOrder);
     set(this, 'model.dragged', draggedModel);
+  }
+
+  @action
+  updateMutable(newOrder, draggedMode) {
+    this.mutableRecords = newOrder;
+  }
+
+  @action
+  removeItemHorizontal(item) {
+    this.mutableRecords = this.mutableRecords.filter(
+      (record) => record !== item,
+    );
+  }
+
+  @action
+  addItemToHorizontal() {
+    this.mutableRecords = [
+      ...this.mutableRecords,
+      `Item ${this.mutableRecords.length + 1}`,
+    ];
   }
 }

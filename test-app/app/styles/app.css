@@ -295,3 +295,39 @@
 .word-break {
   word-wrap: break-word;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
