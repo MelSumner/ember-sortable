@@ -13,7 +13,7 @@
     "test": "cd test-app && pnpm test:ember"
   },
   "devDependencies": {
-    "release-plan": "^0.9.0"
+    "release-plan": "^0.13.0"
   },
   "packageManager": "pnpm@8.15.9",
   "volta": {
